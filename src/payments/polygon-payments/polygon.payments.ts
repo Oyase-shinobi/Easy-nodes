@@ -35,7 +35,7 @@ export class PolygonUSDTService {
       return false;
     }
   }
-                                                 
+
   async getGasPrice(): Promise<string> {  
     const feeData = await this.provider.getFeeData();
     return ethers.formatUnits(feeData.gasPrice ?? 0, 'gwei');
